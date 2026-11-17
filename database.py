@@ -2,6 +2,9 @@ import os
 import sqlite3
 from pathlib import Path
 from contextlib import contextmanager
+from dotenv import load_dotenv
+
+load_dotenv()  # <-- Ye line .env file se DATABASE_URL load karegi
 
 BASE_DIR = Path(__file__).resolve().parent
 DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
